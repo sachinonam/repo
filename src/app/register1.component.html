@@ -1,0 +1,100 @@
+<amplify-sign-out></amplify-sign-out>
+
+
+    
+      <body style="background-color: rgb(241,247,252);" ng-app="myApp">
+        /
+        <META name="GENERATOR" content="MSHTML 11.00.10570.1001">
+   
+        <DIV class="login-clean">
+           <FORM style="max-width: 700px;" id="form-id">
+              <H1 class="text-center">Please Update Details(important)</H1>
+              <DIV class="container d-md-flex justify-content-md-center"><IMG class="d-md-flex justify-content-md-center" 
+                 style='width: 150px; background-image: url("assets/img/reachout.png");' src="Register_files/reachout.png"></DIV>
+              <DIV class="form-group">
+                 <DIV class="row">
+                    <DIV class="col">
+                       <DIV 
+                          class="group">
+                          <input type="text" value="Sarah" #First_Name> 
+                            <SPAN  class="highlight"></SPAN>          
+                             <SPAN class="bar">
+                             </SPAN><LABEL>First Name</LABEL>           
+                       </DIV>
+  
+                       <DIV 
+                          class="group"><input type="text" value="" #Address_1>
+                            <SPAN class="highlight"></SPAN>  
+                             <SPAN class="bar"></SPAN>
+                             <LABEL>Address 1</LABEL>           
+                       </DIV>
+  
+                       <DIV 
+                          class="group">
+                          <input type="text" value="" #city>
+                            <SPAN 
+                          class="highlight"></SPAN>   
+                        <SPAN class="bar"></SPAN>
+                        <LABEL>City Name</LABEL>             
+                       </DIV>
+  
+                     
+                       <DIV class="dropdown">
+                        <SPAN id="top">Select User Type: </SPAN>  <BR>
+                        <SELECT name="Services" #services>
+                           <OPTION value="1">Pharmacy</OPTION>
+                             <OPTION value="2">Grocery</OPTION>
+                             <OPTION value="3">Food</OPTION>
+                        </SELECT>
+                     </DIV>
+                      
+  
+
+                       <DIV class="col offset-md-1"><BUTTON tabindex="13" class="btn btn-primary btn-block" style="width: 200px;" type="submit" (click)="getHTMLAttributeValue()">Submit</BUTTON></DIV>
+                    </DIV>
+                    
+                    <DIV class="col">
+                       <DIV class="group">
+                        <input type="text" value="" #Last_Name>
+                          <SPAN class="highlight"></SPAN> 
+                          <SPAN class="bar"></SPAN>
+                          <LABEL>Last Name</LABEL>           
+                       </DIV>
+  
+                       <DIV 
+                          class="group"><input type="text" value="" #Address_2>
+                            <SPAN  class="highlight"></SPAN>   
+                             <SPAN class="bar"></SPAN>
+                             <LABEL>Address 2</LABEL>           
+                       </DIV>
+  
+                       <DIV class="group">
+                        <input type="number" value="" #zip_code>
+                          <SPAN class="highlight"></SPAN>
+                          <SPAN class="bar"> </SPAN>
+                          <LABEL>Zip Code</LABEL> 
+                       </DIV>
+  
+                       <DIV class="dropdown">
+                          <SPAN id="top">Select User Type: </SPAN>  <BR>
+                          <SELECT name="User Type" #user_type>
+                             <OPTION value="1">Helper</OPTION>
+                             <OPTION value="2">Seeker</OPTION>
+                             <OPTION value="3">Helper &amp; Seeker Both </OPTION>
+                          </SELECT>
+                       </DIV>
+  
+                        
+                       <DIV class="col"><BUTTON tabindex="14" class="btn btn-primary btn-block" style="width: 200px;" 
+                          type="submit" (click)="getCancel()">Cancel</BUTTON></DIV>
+                    </DIV>
+                    
+                 </DIV>
+              </DIV>
+           </FORM>
+        </DIV>
+     </body>
+        
+
+
+     
