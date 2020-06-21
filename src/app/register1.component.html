@@ -22,7 +22,8 @@
                              </SPAN><LABEL>First Name</LABEL>           
                        </DIV>
   
-                       <DIV 
+   
+						<DIV 
                           class="group"><input type="text" value="" #Address_1>
                             <SPAN class="highlight"></SPAN>  
                              <SPAN class="bar"></SPAN>
@@ -93,6 +94,24 @@
               </DIV>
            </FORM>
         </DIV>
+		<DIV class="col">
+		<p>Active Requests:</p>
+     	 <table border=1>
+	 <tr>
+  <ul>
+    <li *ngFor="let user of users">
+      <td width=100> {{ user.RequestType}}  </td>
+	  <td width=100> {{ user.RequestType}}  </td>
+	  <td width=100> {{user.Zipcode}} </td>
+	  <td width=100> {{ user.Address1}}  </td>
+	  <td width=100> {{ user.Country}}  </td>
+	  <td width=100> {{ user.Address2}}  </td>
+	  <td width=100><input type="radio" id="male" name="gender" value="male" (click)="getCancel()"></td>
+    </li>
+  </ul>  
+</tr>
+</table> 
+</DIV>
      </body>
         
 

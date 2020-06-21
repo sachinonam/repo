@@ -36,6 +36,12 @@ export class Register1Component implements OnInit {
   signedIn: boolean;
   user : any;
   greeting: any;
+  users : any;
+  
+
+
+
+
   
   constructor(private amplifyService: AmplifyService,private router: Router,public myapp: AppComponent) {
     
@@ -52,6 +58,33 @@ export class Register1Component implements OnInit {
         //this.router.navigate(['../']);
       }
     });
+	
+	
+	this.users = [{
+    "RequestType": "Food",
+    "City": "",
+    "Zipcode": "SC  29406-4829",
+    "Address1": "6650 Rivers Ave Ste 105",
+    "Country": "South Carolina",
+    "Address2": " North Charleston"
+  },
+  {
+    "RequestType": "Grocery",
+    "City": "New york",
+    "Zipcode": "100602",
+    "Address1": "96 Mellish Steet",
+    "Country": "New York",
+    "Address2": ""
+  },
+  {
+    "RequestType": "Grocery",
+    "City": "New york",
+    "Zipcode": "E658NG",
+    "Address1": "1 NewYork Lane",
+    "Country": "USA",
+    "Address2": ""
+  }
+]
     
    }
 
@@ -85,12 +118,13 @@ Auth.currentUserInfo();
 debugger;
    console.log(Auth.currentUserInfo());
 
+   
   const res = getData(queryParameters);
 
   console.log(res);
 	
   debugger;
-  this.router.navigate(['../']);
+  this.router.navigate(['./register1',[this.users]]);
   }
 
   getCancel(): any {
