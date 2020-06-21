@@ -7,6 +7,7 @@ import API from '@aws-amplify/api';
 import {enableProdMode} from '@angular/core';
 import 'rxjs/add/operator/toPromise';
 import Amplify, { Auth } from 'aws-amplify';
+import {AppComponent} from '../app.component';
 
 Amplify.configure({
 	API: {
@@ -36,8 +37,8 @@ export class Register1Component implements OnInit {
   user : any;
   greeting: any;
   
-  constructor(private amplifyService: AmplifyService,private router: Router) {
-   
+  constructor(private amplifyService: AmplifyService,private router: Router,public myapp: AppComponent) {
+    
     this.amplifyService.authStateChange$
     .subscribe(authState => {
       this.signedIn = authState.state === 'signedIn';
@@ -78,8 +79,11 @@ export class Register1Component implements OnInit {
     "Address_1": this.Address_1.nativeElement.value,
     "Address_2": this.Address_2.nativeElement.value,
     "user_type": this.user_type.nativeElement.value,
-    "user_name": this.user,
+    "user_name": this.myapp.user.username,
 }
+Auth.currentUserInfo();
+debugger;
+   console.log(Auth.currentUserInfo());
 
   const res = getData(queryParameters);
 
